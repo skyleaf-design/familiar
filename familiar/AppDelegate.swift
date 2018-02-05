@@ -68,13 +68,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     popover.performClose(nil)
     guard let the_detector: Any = self.click_detector else { return }
     NSEvent.removeMonitor(the_detector)
+    self.click_detector = nil
   }
   
+  // Create a listener to close the popover when the user clicks.
   func showPopover(sender: Any?) {
-    if let button = statusItem.button {
-      popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-    }
-    // Create a listener to close the popover when the user clicks.
+    guard let button = statusItem.button else { return }
+    guard self.click_detector == nil else { return }
+    
+    popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
     self.click_detector = NSEvent.addGlobalMonitorForEvents(matching:[NSEvent.EventTypeMask.leftMouseDown, NSEvent.EventTypeMask.rightMouseDown], handler: { [weak self] event in
       self?.hidePopover()
     })
