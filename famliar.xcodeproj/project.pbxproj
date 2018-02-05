@@ -8,10 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6B2202805DA002E0198 /* AppDelegate.swift */; };
-		6412C6B5202805DA002E0198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6B4202805DA002E0198 /* ViewController.swift */; };
 		6412C6B7202805DA002E0198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B6202805DA002E0198 /* Assets.xcassets */; };
 		6412C6BA202805DA002E0198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B8202805DA002E0198 /* Main.storyboard */; };
 		6412C6C6202805DB002E0198 /* famliarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6C5202805DB002E0198 /* famliarTests.swift */; };
+		6412C6DA20280630002E0198 /* vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D320280630002E0198 /* vocabulary.swift */; };
+		6412C6DB20280630002E0198 /* GitPathTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D420280630002E0198 /* GitPathTransform.swift */; };
+		6412C6DC20280630002E0198 /* FileChangedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D520280630002E0198 /* FileChangedStream.swift */; };
+		6412C6DD20280630002E0198 /* MessagePerceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D620280630002E0198 /* MessagePerceptor.swift */; };
+		6412C6DE20280630002E0198 /* GenericStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D720280630002E0198 /* GenericStream.swift */; };
+		6412C6DF20280630002E0198 /* GitReceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D820280630002E0198 /* GitReceptor.swift */; };
+		6412C6E020280630002E0198 /* FileChangedReceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D920280630002E0198 /* FileChangedReceptor.swift */; };
+		6412C6E32028063E002E0198 /* SKQueueDelegateForwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E12028063E002E0198 /* SKQueueDelegateForwarder.swift */; };
+		6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */; };
+		6412C6E62028064B002E0198 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E52028064B002E0198 /* TextViewController.swift */; };
+		6412C6E820280663002E0198 /* KQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E720280663002E0198 /* KQueue.swift */; };
+		6412C6EB20280CDB002E0198 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6412C6E920280CDA002E0198 /* Result.framework */; };
+		6412C6EC20280CDB002E0198 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6412C6E920280CDA002E0198 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6412C6ED20280CDB002E0198 /* SwiftGit2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6412C6EA20280CDB002E0198 /* SwiftGit2.framework */; };
+		6412C6EE20280CDB002E0198 /* SwiftGit2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6412C6EA20280CDB002E0198 /* SwiftGit2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6412C6F320280D02002E0198 /* SwiftGit2.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */; };
+		6412C6F420280D02002E0198 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6412C6F220280D02002E0198 /* Result.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,10 +40,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6412C6EF20280CDB002E0198 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6412C6EE20280CDB002E0198 /* SwiftGit2.framework in Embed Frameworks */,
+				6412C6EC20280CDB002E0198 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6412C6F020280CF0002E0198 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				6412C6F320280D02002E0198 /* SwiftGit2.framework.dSYM in CopyFiles */,
+				6412C6F420280D02002E0198 /* Result.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6412C6AF202805DA002E0198 /* famliar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = famliar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6412C6B2202805DA002E0198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6412C6B4202805DA002E0198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6412C6B6202805DA002E0198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6412C6B9202805DA002E0198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6412C6BB202805DA002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +76,21 @@
 		6412C6C1202805DB002E0198 /* famliarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = famliarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6412C6C5202805DB002E0198 /* famliarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = famliarTests.swift; sourceTree = "<group>"; };
 		6412C6C7202805DB002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6412C6D320280630002E0198 /* vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabulary.swift; sourceTree = "<group>"; };
+		6412C6D420280630002E0198 /* GitPathTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitPathTransform.swift; sourceTree = "<group>"; };
+		6412C6D520280630002E0198 /* FileChangedStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileChangedStream.swift; sourceTree = "<group>"; };
+		6412C6D620280630002E0198 /* MessagePerceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePerceptor.swift; sourceTree = "<group>"; };
+		6412C6D720280630002E0198 /* GenericStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericStream.swift; sourceTree = "<group>"; };
+		6412C6D820280630002E0198 /* GitReceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitReceptor.swift; sourceTree = "<group>"; };
+		6412C6D920280630002E0198 /* FileChangedReceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileChangedReceptor.swift; sourceTree = "<group>"; };
+		6412C6E12028063E002E0198 /* SKQueueDelegateForwarder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKQueueDelegateForwarder.swift; sourceTree = "<group>"; };
+		6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkspaceDelegate.swift; sourceTree = "<group>"; };
+		6412C6E52028064B002E0198 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		6412C6E720280663002E0198 /* KQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQueue.swift; sourceTree = "<group>"; };
+		6412C6E920280CDA002E0198 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		6412C6EA20280CDB002E0198 /* SwiftGit2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGit2.framework; path = Carthage/Build/Mac/SwiftGit2.framework; sourceTree = "<group>"; };
+		6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftGit2.framework.dSYM; path = Carthage/Build/Mac/SwiftGit2.framework.dSYM; sourceTree = "<group>"; };
+		6412C6F220280D02002E0198 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6412C6ED20280CDB002E0198 /* SwiftGit2.framework in Frameworks */,
+				6412C6EB20280CDB002E0198 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +116,10 @@
 		6412C6A6202805DA002E0198 = {
 			isa = PBXGroup;
 			children = (
+				6412C6F220280D02002E0198 /* Result.framework.dSYM */,
+				6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */,
+				6412C6E920280CDA002E0198 /* Result.framework */,
+				6412C6EA20280CDB002E0198 /* SwiftGit2.framework */,
 				6412C6B1202805DA002E0198 /* famliar */,
 				6412C6C4202805DB002E0198 /* famliarTests */,
 				6412C6B0202805DA002E0198 /* Products */,
@@ -76,8 +138,11 @@
 		6412C6B1202805DA002E0198 /* famliar */ = {
 			isa = PBXGroup;
 			children = (
+				6412C6E720280663002E0198 /* KQueue.swift */,
+				6412C6D220280620002E0198 /* mock_lhvm */,
+				6412C6D12028061B002E0198 /* appkit */,
+				6412C6D020280616002E0198 /* ui */,
 				6412C6B2202805DA002E0198 /* AppDelegate.swift */,
-				6412C6B4202805DA002E0198 /* ViewController.swift */,
 				6412C6B6202805DA002E0198 /* Assets.xcassets */,
 				6412C6B8202805DA002E0198 /* Main.storyboard */,
 				6412C6BB202805DA002E0198 /* Info.plist */,
@@ -95,6 +160,37 @@
 			path = famliarTests;
 			sourceTree = "<group>";
 		};
+		6412C6D020280616002E0198 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6E52028064B002E0198 /* TextViewController.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		6412C6D12028061B002E0198 /* appkit */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6E12028063E002E0198 /* SKQueueDelegateForwarder.swift */,
+				6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */,
+			);
+			path = appkit;
+			sourceTree = "<group>";
+		};
+		6412C6D220280620002E0198 /* mock_lhvm */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6D920280630002E0198 /* FileChangedReceptor.swift */,
+				6412C6D520280630002E0198 /* FileChangedStream.swift */,
+				6412C6D720280630002E0198 /* GenericStream.swift */,
+				6412C6D420280630002E0198 /* GitPathTransform.swift */,
+				6412C6D820280630002E0198 /* GitReceptor.swift */,
+				6412C6D620280630002E0198 /* MessagePerceptor.swift */,
+				6412C6D320280630002E0198 /* vocabulary.swift */,
+			);
+			path = mock_lhvm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +201,8 @@
 				6412C6AB202805DA002E0198 /* Sources */,
 				6412C6AC202805DA002E0198 /* Frameworks */,
 				6412C6AD202805DA002E0198 /* Resources */,
+				6412C6EF20280CDB002E0198 /* Embed Frameworks */,
+				6412C6F020280CF0002E0198 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -197,8 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6412C6B5202805DA002E0198 /* ViewController.swift in Sources */,
+				6412C6DD20280630002E0198 /* MessagePerceptor.swift in Sources */,
+				6412C6DA20280630002E0198 /* vocabulary.swift in Sources */,
+				6412C6DB20280630002E0198 /* GitPathTransform.swift in Sources */,
+				6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */,
+				6412C6DF20280630002E0198 /* GitReceptor.swift in Sources */,
+				6412C6E020280630002E0198 /* FileChangedReceptor.swift in Sources */,
+				6412C6DC20280630002E0198 /* FileChangedStream.swift in Sources */,
 				6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */,
+				6412C6DE20280630002E0198 /* GenericStream.swift in Sources */,
+				6412C6E32028063E002E0198 /* SKQueueDelegateForwarder.swift in Sources */,
+				6412C6E62028064B002E0198 /* TextViewController.swift in Sources */,
+				6412C6E820280663002E0198 /* KQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +454,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D48QC892LT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = famliar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.famliar;
@@ -362,6 +474,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D48QC892LT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = famliar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.famliar;
