@@ -1,15 +1,7 @@
-//
-//  famliarTests.swift
-//  famliarTests
-//
-//  Created by Raphael on 2/4/18.
-//  Copyright © 2018 Skyleaf Design LLC. All rights reserved.
-//
-
 import XCTest
-@testable import famliar
+@testable import familiar
 
-class famliarTests: XCTestCase {
+class familiarTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

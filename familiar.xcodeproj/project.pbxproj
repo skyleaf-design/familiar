@@ -10,7 +10,7 @@
 		6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6B2202805DA002E0198 /* AppDelegate.swift */; };
 		6412C6B7202805DA002E0198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B6202805DA002E0198 /* Assets.xcassets */; };
 		6412C6BA202805DA002E0198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B8202805DA002E0198 /* Main.storyboard */; };
-		6412C6C6202805DB002E0198 /* famliarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6C5202805DB002E0198 /* famliarTests.swift */; };
+		6412C6C6202805DB002E0198 /* familiarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6C5202805DB002E0198 /* familiarTests.swift */; };
 		6412C6DA20280630002E0198 /* vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D320280630002E0198 /* vocabulary.swift */; };
 		6412C6DB20280630002E0198 /* GitPathTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D420280630002E0198 /* GitPathTransform.swift */; };
 		6412C6DC20280630002E0198 /* FileChangedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6D520280630002E0198 /* FileChangedStream.swift */; };
@@ -67,14 +67,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6412C6AF202805DA002E0198 /* famliar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = famliar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6412C6AF202805DA002E0198 /* familiar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = familiar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6412C6B2202805DA002E0198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6412C6B6202805DA002E0198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6412C6B9202805DA002E0198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6412C6BB202805DA002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6412C6BC202805DA002E0198 /* famliar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = famliar.entitlements; sourceTree = "<group>"; };
-		6412C6C1202805DB002E0198 /* famliarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = famliarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6412C6C5202805DB002E0198 /* famliarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = famliarTests.swift; sourceTree = "<group>"; };
+		6412C6BC202805DA002E0198 /* familiar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = familiar.entitlements; sourceTree = "<group>"; };
+		6412C6C1202805DB002E0198 /* familiarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = familiarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6412C6C5202805DB002E0198 /* familiarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = familiarTests.swift; sourceTree = "<group>"; };
 		6412C6C7202805DB002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6412C6D320280630002E0198 /* vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vocabulary.swift; sourceTree = "<group>"; };
 		6412C6D420280630002E0198 /* GitPathTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitPathTransform.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */,
 				6412C6E920280CDA002E0198 /* Result.framework */,
 				6412C6EA20280CDB002E0198 /* SwiftGit2.framework */,
-				6412C6B1202805DA002E0198 /* famliar */,
+				6412C6B1202805DA002E0198 /* familiar */,
 				6412C6C4202805DB002E0198 /* famliarTests */,
 				6412C6B0202805DA002E0198 /* Products */,
 			);
@@ -129,13 +129,13 @@
 		6412C6B0202805DA002E0198 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6412C6AF202805DA002E0198 /* famliar.app */,
-				6412C6C1202805DB002E0198 /* famliarTests.xctest */,
+				6412C6AF202805DA002E0198 /* familiar.app */,
+				6412C6C1202805DB002E0198 /* familiarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6412C6B1202805DA002E0198 /* famliar */ = {
+		6412C6B1202805DA002E0198 /* familiar */ = {
 			isa = PBXGroup;
 			children = (
 				6412C6E720280663002E0198 /* KQueue.swift */,
@@ -146,15 +146,15 @@
 				6412C6B6202805DA002E0198 /* Assets.xcassets */,
 				6412C6B8202805DA002E0198 /* Main.storyboard */,
 				6412C6BB202805DA002E0198 /* Info.plist */,
-				6412C6BC202805DA002E0198 /* famliar.entitlements */,
+				6412C6BC202805DA002E0198 /* familiar.entitlements */,
 			);
-			path = famliar;
+			path = familiar;
 			sourceTree = "<group>";
 		};
 		6412C6C4202805DB002E0198 /* famliarTests */ = {
 			isa = PBXGroup;
 			children = (
-				6412C6C5202805DB002E0198 /* famliarTests.swift */,
+				6412C6C5202805DB002E0198 /* familiarTests.swift */,
 				6412C6C7202805DB002E0198 /* Info.plist */,
 			);
 			path = famliarTests;
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6412C6AE202805DA002E0198 /* famliar */ = {
+		6412C6AE202805DA002E0198 /* familiar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6412C6CA202805DB002E0198 /* Build configuration list for PBXNativeTarget "famliar" */;
+			buildConfigurationList = 6412C6CA202805DB002E0198 /* Build configuration list for PBXNativeTarget "familiar" */;
 			buildPhases = (
 				6412C6AB202805DA002E0198 /* Sources */,
 				6412C6AC202805DA002E0198 /* Frameworks */,
@@ -208,14 +208,14 @@
 			);
 			dependencies = (
 			);
-			name = famliar;
+			name = familiar;
 			productName = famliar;
-			productReference = 6412C6AF202805DA002E0198 /* famliar.app */;
+			productReference = 6412C6AF202805DA002E0198 /* familiar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6412C6C0202805DB002E0198 /* famliarTests */ = {
+		6412C6C0202805DB002E0198 /* familiarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6412C6CD202805DB002E0198 /* Build configuration list for PBXNativeTarget "famliarTests" */;
+			buildConfigurationList = 6412C6CD202805DB002E0198 /* Build configuration list for PBXNativeTarget "familiarTests" */;
 			buildPhases = (
 				6412C6BD202805DB002E0198 /* Sources */,
 				6412C6BE202805DB002E0198 /* Frameworks */,
@@ -226,9 +226,9 @@
 			dependencies = (
 				6412C6C3202805DB002E0198 /* PBXTargetDependency */,
 			);
-			name = famliarTests;
+			name = familiarTests;
 			productName = famliarTests;
-			productReference = 6412C6C1202805DB002E0198 /* famliarTests.xctest */;
+			productReference = 6412C6C1202805DB002E0198 /* familiarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6412C6AA202805DA002E0198 /* Build configuration list for PBXProject "famliar" */;
+			buildConfigurationList = 6412C6AA202805DA002E0198 /* Build configuration list for PBXProject "familiar" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -265,8 +265,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6412C6AE202805DA002E0198 /* famliar */,
-				6412C6C0202805DB002E0198 /* famliarTests */,
+				6412C6AE202805DA002E0198 /* familiar */,
+				6412C6C0202805DB002E0198 /* familiarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6412C6C6202805DB002E0198 /* famliarTests.swift in Sources */,
+				6412C6C6202805DB002E0198 /* familiarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +323,7 @@
 /* Begin PBXTargetDependency section */
 		6412C6C3202805DB002E0198 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6412C6AE202805DA002E0198 /* famliar */;
+			target = 6412C6AE202805DA002E0198 /* familiar */;
 			targetProxy = 6412C6C2202805DB002E0198 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,7 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = famliar/famliar.entitlements;
+				CODE_SIGN_ENTITLEMENTS = familiar/familiar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D48QC892LT;
@@ -458,9 +458,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = famliar/Info.plist;
+				INFOPLIST_FILE = familiar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.famliar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.familiar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -470,7 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = famliar/famliar.entitlements;
+				CODE_SIGN_ENTITLEMENTS = familiar/familiar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D48QC892LT;
@@ -478,9 +478,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = famliar/Info.plist;
+				INFOPLIST_FILE = familiar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.famliar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.familiar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -494,12 +494,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D48QC892LT;
-				INFOPLIST_FILE = famliarTests/Info.plist;
+				INFOPLIST_FILE = familiarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.famliarTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.familiarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/famliar.app/Contents/MacOS/famliar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/familiar.app/Contents/MacOS/familiar";
 			};
 			name = Debug;
 		};
@@ -511,19 +511,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D48QC892LT;
-				INFOPLIST_FILE = famliarTests/Info.plist;
+				INFOPLIST_FILE = familiarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.famliarTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyleafdesign.familiarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/famliar.app/Contents/MacOS/famliar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/familiar.app/Contents/MacOS/familiar";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6412C6AA202805DA002E0198 /* Build configuration list for PBXProject "famliar" */ = {
+		6412C6AA202805DA002E0198 /* Build configuration list for PBXProject "familiar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6412C6C8202805DB002E0198 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6412C6CA202805DB002E0198 /* Build configuration list for PBXNativeTarget "famliar" */ = {
+		6412C6CA202805DB002E0198 /* Build configuration list for PBXNativeTarget "familiar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6412C6CB202805DB002E0198 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6412C6CD202805DB002E0198 /* Build configuration list for PBXNativeTarget "famliarTests" */ = {
+		6412C6CD202805DB002E0198 /* Build configuration list for PBXNativeTarget "familiarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6412C6CE202805DB002E0198 /* Debug */,

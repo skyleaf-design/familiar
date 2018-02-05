@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:famliar.xcodeproj">
+      location = "self:/Users/raphael/Developer/famliar/familiar.xcodeproj">
    </FileRef>
 </Workspace>
