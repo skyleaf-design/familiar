@@ -20,23 +20,46 @@ struct GitReceptor: Receptor {
     let options: FileManager.DirectoryEnumerationOptions = [.skipsSubdirectoryDescendants, .skipsPackageDescendants, .skipsHiddenFiles]
     let url = URL(fileURLWithPath: path)
     var found_dirty = false
+    var found_local = false
+    var found_detached = false
     var strings = [String()]
     
     do {
       let directory_urls = try filer.contentsOfDirectory(at: url, includingPropertiesForKeys: [], options: options)
       for url in directory_urls {
         let repo_try = Repository.at(url)
-        guard let _ = repo_try.value else { continue }
+        guard let repo = repo_try.value else { continue }
+        
+        // First, check if the repo is dirty.
         let result = execute(command: "git", arguments: ["-C", url.path, "diff", "--shortstat"])
-        guard !result.isEmpty else { continue }
-        found_dirty = true
-        strings.append("\(url.lastPathComponent) is NOT clean!")
+        guard result.isEmpty else {
+          found_dirty = true
+          strings.append("\(url.lastPathComponent) is NOT clean!")
+          continue
+        }
+        
+        // Second, check if the repo is in "detached" state, which means that it has
+        // no remote repositories set up.
+        guard let remotes = repo.allRemotes().value else { continue } // Error condition.
+        guard remotes.count > 0 else {
+          found_detached = true
+          strings.append("\(url.lastPathComponent) has no remote repository!")
+          continue
+        }
+        
+        // Check that the HEAD branch contains no unpublished commits.
+        let pushed_commits = execute(command: "git", arguments: ["log", "@push..", "--oneline"])
+        guard pushed_commits.count == 0 else {
+          found_local = true
+          strings.append("\(url.lastPathComponent) has no main branch!")
+          continue
+        }
       }
     } catch {
       print("Oh my gosh!!")
     }
     
-    return found_dirty ? strings.joined(separator: "\n") : nil
+    return found_dirty || found_local || found_detached ? strings.joined(separator: "\n") : nil
   }
   
   private func execute(command: String, arguments: [String]) -> String {
