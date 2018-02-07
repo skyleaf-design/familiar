@@ -28,6 +28,7 @@
 		6412C6EE20280CDB002E0198 /* SwiftGit2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6412C6EA20280CDB002E0198 /* SwiftGit2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6412C6F320280D02002E0198 /* SwiftGit2.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */; };
 		6412C6F420280D02002E0198 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6412C6F220280D02002E0198 /* Result.framework.dSYM */; };
+		645931B6202AA17800B48677 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 645931B5202AA17800B48677 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		6412C6EA20280CDB002E0198 /* SwiftGit2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGit2.framework; path = Carthage/Build/Mac/SwiftGit2.framework; sourceTree = "<group>"; };
 		6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftGit2.framework.dSYM; path = Carthage/Build/Mac/SwiftGit2.framework.dSYM; sourceTree = "<group>"; };
 		6412C6F220280D02002E0198 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		645931B5202AA17800B48677 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		6412C6A6202805DA002E0198 = {
 			isa = PBXGroup;
 			children = (
+				645931B5202AA17800B48677 /* LICENSE.txt */,
 				6412C6F220280D02002E0198 /* Result.framework.dSYM */,
 				6412C6F120280D01002E0198 /* SwiftGit2.framework.dSYM */,
 				6412C6E920280CDA002E0198 /* Result.framework */,
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645931B6202AA17800B48677 /* LICENSE.txt in Resources */,
 				6412C6B7202805DA002E0198 /* Assets.xcassets in Resources */,
 				6412C6BA202805DA002E0198 /* Main.storyboard in Resources */,
 			);
