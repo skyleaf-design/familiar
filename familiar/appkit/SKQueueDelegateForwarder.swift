@@ -1,6 +1,6 @@
 /**
  Familiar: a macOS status bar host for the LHVM runtime.
- Copyright (C) 2018 Raphael Spencer
+ Copyright (C) 2018 Skyleaf Design
  
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
