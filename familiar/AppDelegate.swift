@@ -20,6 +20,11 @@
 
 import Cocoa
 import Result
+import ServiceManagement
+
+extension Notification.Name {
+  static let close_launcher = Notification.Name("close_launcher")
+}
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -30,8 +35,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var system_delegate: WorkspaceDelegate?
   let popover = NSPopover()
   var click_detector: Any?
+  var launcher_is_running = false
+  
+  func check_and_close_launcher() {
+    let launcher_app_id = "com.skyleafdesign.familiar-launcher"
+    // If the launcher is running, then it must have started at login.
+    let apps = NSWorkspace.shared.runningApplications
+    self.launcher_is_running = apps.filter { $0.bundleIdentifier == launcher_app_id }.count > 0
+    
+    // Start our launcher app at login
+    SMLoginItemSetEnabled(launcher_app_id as CFString, true)
+    
+    // If WE are running, and the launcher is running, then we don't need it any more.
+    guard self.launcher_is_running else { return }
+    
+    DistributedNotificationCenter.default().postNotificationName(
+      .close_launcher,
+      object: Bundle.main.bundleIdentifier,
+      userInfo: nil,
+      options: DistributedNotificationCenter.Options.deliverImmediately
+    )
+  }
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
+    check_and_close_launcher()
+    
     if let button = statusItem.button {
       button.image = #imageLiteral(resourceName: "familiar")
     }
