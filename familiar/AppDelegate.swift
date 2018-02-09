@@ -26,6 +26,8 @@ extension Notification.Name {
   static let close_launcher = Notification.Name("close_launcher")
 }
 
+let launcher_app_id = "com.skyleafdesign.familiar-launcher"
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   let statusItem = NSStatusBar.system.statusItem(withLength: 28.0)
@@ -36,9 +38,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let popover = NSPopover()
   var click_detector: Any?
   var launcher_is_running = false
+  var login_menu_item: NSMenuItem?
+  var will_launch_at_login: Bool = false {
+    didSet {
+      self.update_menu_ui()
+    }
+  }
   
   func check_and_close_launcher() {
-    let launcher_app_id = "com.skyleafdesign.familiar-launcher"
     // If the launcher is running, then it must have started at login.
     let apps = NSWorkspace.shared.runningApplications
     self.launcher_is_running = apps.filter { $0.bundleIdentifier == launcher_app_id }.count > 0
@@ -64,7 +71,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       button.image = #imageLiteral(resourceName: "familiar")
     }
     
-    constructMenu()
+    
+    self.login_menu_item = NSMenuItem(title: "Start at login", action: #selector(self.toggle_login_start), keyEquivalent: "l")
+    let launch_enabled = UserDefaults.standard.bool(forKey: "will_launch_at_login")
+    self.login_menu_item!.state = launch_enabled ? .on : .off
+    
+    
+    let menu = NSMenu()
+    menu.addItem(NSMenuItem(title: "Git repo stream", action: #selector(AppDelegate.run_stream), keyEquivalent: "1"))
+    menu.addItem(NSMenuItem.separator())
+    menu.addItem(self.login_menu_item!)
+    menu.addItem(NSMenuItem(title: "Quit Familiar", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+
+    statusItem.menu = menu
     
     popover.contentViewController = TextViewController._new()
     
@@ -130,6 +149,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     })
   }
   
+  func update_menu_ui() {
+    guard let menu_item = self.login_menu_item else { return }
+    // Update the UI state of the button to reflect application state.
+    menu_item.state = self.will_launch_at_login ? .on : .off
+  }
+  
+  @objc func toggle_login_start() {
+    // Mutate our own state to be the opposite of the current state.
+    self.will_launch_at_login = !self.will_launch_at_login
+    
+    // Set login item status according to the will_login state.
+    SMLoginItemSetEnabled(launcher_app_id as CFString, will_launch_at_login)
+    
+    // Save the login item state to user defaults, so our UI will reflect the SMLogin status
+    // when the app is re-launched.
+    UserDefaults.standard.set(self.will_launch_at_login, forKey: "will_launch_at_login")
+  }
+  
   func closePopover(sender: Any?) {
     popover.performClose(sender)
   }
@@ -137,16 +174,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @objc func run_stream() {
     guard let generic_runner = self.system_delegate else { return }
     generic_runner.run_streams()
-  }
-  
-  func constructMenu() {
-    let menu = NSMenu()
-    
-    menu.addItem(NSMenuItem(title: "Git repo stream", action: #selector(AppDelegate.run_stream), keyEquivalent: "1"))
-    menu.addItem(NSMenuItem.separator())
-    menu.addItem(NSMenuItem(title: "Quit Familiar", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
-    
-    statusItem.menu = menu
   }
 }
 
