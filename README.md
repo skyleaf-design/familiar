@@ -8,7 +8,7 @@
 
 
 #### It waits for changes to your wifi network, sleep/wake status, or for you to manually click a button in its menu...
-![Familiar status bar menu](menu.png)
+![Familiar status bar menu](assets/menu.png)
 
 #### It checks the git repos in the target directory for uncommited changes, missing remotes, and other issues.
 ###### (Right now this is hard-coded to my own user directory... you'll have to wait for a UI to change this!)
