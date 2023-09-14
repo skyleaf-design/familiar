@@ -11,7 +11,6 @@
 ![Familiar status bar menu](assets/menu.png)
 
 #### It checks the git repos in the target directory for uncommited changes, missing remotes, and other issues.
-###### (Right now this is hard-coded to my own user directory... you'll have to wait for a UI to change this!)
 ![Familiar app icon in the status bar](assets/chirp_chirp.png)
 
 
